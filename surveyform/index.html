@@ -1,0 +1,115 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    <link rel="shortcut icon" href="img/logo.png" />
+    <title>Rubik's Cube | Survey Form</title>
+  </head>
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <div id="left" class="col-xs-12 col-lg-4 px-0 py-0">
+          <h1 id="title" class="text-center text-uppercase my-0 py-3">Rubik's Cube</h1>
+          <img src="img/cube.jpeg" class="w-100">
+          <div class="container text-justify py-3">
+            <p id="description">Ernõ Rubik, a professor from Budapest In Hungary, wanted to help his students understand three-dimensional problems. His solution? The Rubik’s Cube! Ernõ creates the first working prototype of the cube in 1974.</p>
+            <p>The Rubik’s Cube becomes a worldwide craze and hits millions of sales. During this time the Cube became notorious for being unsolvable. A 12 year old boy, Patrick Bossert, releases a book, ‘You Can Do the Cube’, which goes on to sell more than 1.5 million copies.</p>
+          </div>
+        </div>
+        <div id="right" class="col-12 col-lg-8 text-center py-3">
+          <div id="wrapper1">
+            <h1 class="my-0 py-1"><span class="q">Q</span><span class="u">U</span><span class="i">I</span><span class="z">Z</span><span class="lol">!</span></h1>
+            <p class="text-uppercase">fill the survey below</p>
+          </div>
+          <div id="wrapper2" class="container py-3">
+            <form id="survey-form">
+              <div class="row text-left">
+                <div class="col-xs-12 col-md-6">
+                  <label id="name-label" for="exampleFormControlInput1">Name:</label>
+                  <input id="name" required type="text" class="form-control" id="exampleFormControlInput1" placeholder="ex. Erno Rubik">
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <label id="email-label" for="exampleInputEmail1">Email address:</label>
+                  <input id="email" required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex. ernor@outlook.com">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="col-xs-12 col-md-6 mt-3">
+                  <div class="form-group">
+                    <label id="number-label" for="number" id="number-label">How many times have you solved RC?</label>
+                    <input type="number" class="form-control" id="number" placeholder="ex. 3" min="0" max="1000">
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-6 mt-xs-0 mt-md-3">
+                  <div class="form-group">
+                    <label for="dropdown">How many RCs do you have?</label>
+                    <select class="form-control" id="dropdown">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-6 mt-3">
+                  <label for="radios" class="mr-xs-2 mr-md-5">Do you use alghorithm to solve RC?</label>
+                </div>
+                <div class="col-xs-12 col-md-6 mt-xs-0 mt-md-3">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Yes</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-6 mt-3">
+                  <label for="checkboxes" class="mr-xs-2 mr-md-5">Which RC do you like most?</label>
+                </div>
+                <div class="col-xs-12 col-md-6 mt-xs-0 mt-md-3">
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 2x2
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 3x3
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Other
+                    </label>
+                 </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group mt-3">
+                    <label for="exampleTextarea">Leave us a message.</label>
+                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="col-12 text-center mt-5">
+                  <button id="submit" type="submit" name="button" form="survey-form" value="submit" class="btn btn-light w-25">Submit</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+    <!-- FCC JS -->
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
