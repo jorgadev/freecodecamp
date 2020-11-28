@@ -1,3 +1,3 @@
-# freecodecamp
+# Freecodecamp
 
-this is readme file
+This is freecodecamp repository.
