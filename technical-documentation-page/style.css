@@ -150,8 +150,6 @@ main .container{
     }
     #overlay{
         display:block;
-        width: 100%;
-        height: 1000vh;
     }
     .blury{
         background-color: #000;
