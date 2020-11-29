@@ -3,10 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-    <title>The "Musician" Landing Page </title>
+    <title>The Musician </title>
 </head>
 <body>
-    
+    <!-- Header -->
+    <header id="header">
+        <nav id="nav-bar">
+            <div class="container">
+                <ul>
+                    <li><a href="#" class="nav-link">About</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                    <li><a href="#" class="nav-link">Shop</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="container">
+                <div class="main-wrap">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+                    <div class="buttons">
+                        <a href="#"><img src="img/google-play.png"></a>
+                        <a href="#"><img src="img/app-store.png"></a>
+                    </div>
+                </div>
+                <div class="image-wrap">
+                    <img src="img/home.png" id="header-img">
+                </div>
+            </div>
+        </main>
+    </header>
+
+    <!-- Section 1 -->
+    <section class="about">
+        <div class="container">
+            <div class="card">
+                <div><i class="fas fa-gamepad"></i></div>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quod.</p>
+            </div>
+            <div class="card">
+                <div><i class="fab fa-android"></i></div>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quod.</p>
+            </div>
+            <div class="card">
+                <div><i class="fas fa-users"></i></div>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quod.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Centered -->
+    <div class="centered">
+        <h1>Check this out:</h1>
+            <iframe width="956" height="538" src="https://www.youtube.com/embed/wRO0W8uSwOA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Section 2 -->
+    <section class="contact">
+        <h1>Subscribe to our Newsletter. Join our Email List..</h1>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input type="email" name="email" id="email" placeholder="E-mail" required>
+            <input type="submit" value="Subscribe" id="submit">
+        </form>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="shop">
+        <div class="container">
+            <div class="shop-info">
+                <h1>Musician Shop</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ipsa quo saepe consequatur obcaecati? Sapiente accusantium doloremque eligendi fugit dolorem?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, vel.</p>
+            </div>
+            <div class="shop-img">
+                <img src="img/shop.png">
+            </div>
+            <div class="woman-img">
+                <img src="img/woman.png">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="download">
+        <h1>Available for free on:</h1>
+        <div class="buttons">
+            <a href="#"><img src="img/google-play.png"></a>
+            <a href="#"><img src="img/app-store.png"></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        Copyright &copy; 2020 The Musician | Powered by <a href="#">jorgadev</a>
+    </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
