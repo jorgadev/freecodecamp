@@ -107,10 +107,22 @@
         <div id="overlay"></div>
     </div>
     <script>
+        // Hamburger function 
         document.getElementById("menu").onclick = function(){
             document.getElementById("navbar").classList.toggle("open");
             document.getElementById("menu").classList.toggle("open-menu");
             document.getElementById("overlay").classList.toggle("blury");
+        }
+        
+        // Menu active link change
+        document.onclick = function(e){
+            if(e.target.classList.contains("nav-link")){
+                otherLinks = document.querySelectorAll(".nav-link");
+                otherLinks.forEach(function(link){
+                    link.parentElement.classList.remove("active");
+                });
+                e.target.parentElement.classList.add("active");
+            }
         }
     </script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
