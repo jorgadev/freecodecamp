@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>JSDocs</title>
+</head>
+<body>
+    <div class="row">
+        <i id="menu" class="fas fa-bars"></i>
+        <!-- Navbar -->
+        <nav id="navbar">
+            <header>
+                <img src="javascript.png">
+                <span>Docs</span>
+            </header>
+            <ul>
+                <li class="active"><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
+                <li><a href="#Javascript_and_Java" class="nav-link">Javascript and Java</a></li>
+                <li><a href="#Hello_World" class="nav-link">Hello World</a></li>
+                <li><a href="#Variables" class="nav-link">Variables</a></li>
+                <li><a href="#Declaring_Variables" class="nav-link">Declaring Variables</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <main id="main-doc">
+            <div class="container">
+                <section class="main-section" id="Introduction">
+                    <header>
+                        <h1>Introduction</h1>
+                    </header>
+                    <p>
+                        JavaScript is a cross-platform, <strong>object-oriented scripting language</strong>. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
+                    </p>
+                    <hr>
+                </section>
+                <section class="main-section" id="What_you_should_already_know">
+                    <header>
+                        <h1>What you sholud already know</h1>
+                    </header>
+                    <p>This guide assumes you have the following basic background:</p><br>
+                    <ul>
+                        <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+                        <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+                        <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
+                    </ul>
+                    <hr>
+                </section>
+                <section class="main-section" id="Javascript_and_Java">
+                    <header>
+                        <h1>Javascript and Java</h1>
+                    </header>
+                    <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p><br>
+                    <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values.</p><br>
+                    <p>The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+                    <hr>
+                </section>
+                <section class="main-section" id="Hello_World">
+                    <header>
+                        <h1>Hello World</h1>
+                    </header>
+                    <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p><br>
+                    <code>
+                        function greetMe(yourName) {<br>
+                        &nbsp;alert("Hello " + yourName); <br>
+                        }<br><br> 
+                        greetMe("World");
+                    </code>
+                    <hr>
+                </section>
+                <section class="main-section" id="Variables">
+                    <header>
+                        <h1>Variables</h1>
+                    </header>
+                    <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p><br>
+                    <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p><br>
+                    <code>var num = 5 ; var name = "David" ; let _width = 193.5 </code><br>
+                    <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
+                    <hr>
+                </section>
+                <section class="main-section" id="Declaring_Variables">
+                    <header>
+                        <h1>Declaring Variables</h1>
+                    </header>
+                    <p>You can declare a variable in three ways:</p><br>
+                    <ul>
+                        <li>
+                            <p>With the keyword var. For example,</p><br>
+                            <code>var x = 42</code><br>
+                        </li>
+                        <li>
+                            <p>By simply assigning it a value. For example,</p><br>
+                            <code>x = 42</code><br>
+                        </li>
+                        <li>
+                            <p>With the keyword let. For Example,</p><br>
+                            <code>let y = 13</code>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <div id="overlay"></div>
+    </div>
+    <script>
+        document.getElementById("menu").onclick = function(){
+            document.getElementById("navbar").classList.toggle("open");
+            document.getElementById("menu").classList.toggle("open-menu");
+            document.getElementById("overlay").classList.toggle("blury");
+        }
+    </script>
+</body>
+</html>
