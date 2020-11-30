@@ -8,7 +8,8 @@
 html, body {
   font-family: "Lato", sans-serif;
   color: #030249;
-  overflow: hidden;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -26,7 +27,7 @@ img {
 }
 
 nav {
-  padding: 0.25rem 0;
+  padding: 0.1rem 0;
   height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,6 +35,12 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: fixed;
+  z-index: 1;
+  background-color: #fff;
+  width: 100%;
+  -webkit-box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.1);
 }
 
 nav .container {
@@ -60,14 +67,13 @@ nav .container ul li {
 }
 
 main {
-  -webkit-box-shadow: inset 0px 0px 5px -5px rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0px 0px 5px -5px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
           box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
   height: 60vh;
 }
 
 main .container {
+  padding-top: 5rem;
   display: -ms-grid;
   display: grid;
   height: 100%;
@@ -105,11 +111,12 @@ main .container .image-wrap {
 }
 
 main .container .image-wrap img {
-  width: 200px;
+  width: 250px;
 }
 
 .about {
   background-color: #fafafa;
+  position: relative;
 }
 
 .about .container {
@@ -118,5 +125,275 @@ main .container .image-wrap img {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   text-align: center;
+  grid-gap: 5rem;
+}
+
+.about .container .card {
+  margin-top: 5rem;
+  padding-bottom: 30rem;
+}
+
+.about .container .card div {
+  background-color: #eee;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.about .container .card div i {
+  font-size: 2rem;
+  color: #17B7F1;
+}
+
+.about .centered {
+  background-color: #fff;
+  padding: 5rem;
+  position: absolute;
+  bottom: -25rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about .centered h1 {
+  margin-bottom: 3rem;
+}
+
+.contact {
+  padding-top: 30rem;
+  padding-bottom: 5rem;
+  background-color: #17B7F1;
+  text-align: center;
+}
+
+.contact h1 {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.contact form {
+  width: 500px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+  grid-gap: 1rem;
+}
+
+.contact form #email {
+  height: 3rem;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+.contact form #submit {
+  background-color: #030249;
+  color: #fff;
+  border: 0;
+  text-transform: uppercase;
+}
+
+.shop {
+  position: relative;
+}
+
+.shop .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}
+
+.shop .container .shop-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.shop .container .shop-info h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.shop .container .shop-info p {
+  color: #666;
+}
+
+.shop .container .shop-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shop .container .shop-img img {
+  width: 300px;
+}
+
+.shop .woman-img {
+  position: absolute;
+  bottom: -52px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.shop .woman-img img {
+  width: 350px;
+}
+
+.download {
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+  padding: 7rem 0;
+}
+
+.download .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.download h1 {
+  margin-bottom: 2rem;
+}
+
+.download .buttons img {
+  width: 160px;
+  height: 55px;
+}
+
+footer {
+  background-color: #17B7F1;
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: #030249;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 992px) {
+  #video {
+    width: 700px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    height: 100vh;
+    padding-top: 5rem;
+  }
+  main .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .about .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-padding-after: 15rem;
+            padding-block-end: 15rem;
+  }
+  .about .container .card {
+    padding: 0;
+  }
+  .about #video {
+    width: 500px;
+    height: 250px;
+  }
+  .contact h1 {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+  .contact form {
+    width: 300px;
+    -ms-grid-columns: 70% 30%;
+        grid-template-columns: 70% 30%;
+  }
+  .contact form #email {
+    height: 2rem;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+  }
+  .shop .container {
+    padding-bottom: 15rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .shop .container .shop-info h1 {
+    font-size: 1.6rem;
+  }
+  .shop .container .shop-img {
+    margin-top: 3rem;
+  }
+  .download {
+    font-size: 1.2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

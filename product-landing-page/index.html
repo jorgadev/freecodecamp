@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
     <title>The Musician | Product Landing Page </title>
@@ -12,18 +14,18 @@
 <body>
     <!-- Header -->
     <header id="header">
-        <nav id="nav-bar">
+        <nav id="nav-bar" class="animate__animated animate__bounceInDown">
             <div class="container">
                 <ul>
-                    <li><a href="#" class="nav-link">About</a></li>
-                    <li><a href="#" class="nav-link">Contact</a></li>
-                    <li><a href="#" class="nav-link">Shop</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#shop" class="nav-link">Shop</a></li>
                 </ul>
             </div>
         </nav>
         <main>
             <div class="container">
-                <div class="main-wrap">
+                <div class="main-wrap animate__animated animate__bounceInLeft">
                     <h1>Lorem ipsum dolor sit amet.</h1>
                     <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
                     <div class="buttons">
@@ -31,7 +33,7 @@
                         <a href="#"><img src="img/app-store.png"></a>
                     </div>
                 </div>
-                <div class="image-wrap">
+                <div class="image-wrap animate__animated animate__bounceInRight">
                     <img src="img/home.png" id="header-img">
                 </div>
             </div>
@@ -39,50 +41,52 @@
     </header>
 
     <!-- Section 1 -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
-            <div class="card">
+            <div class="card animate__animated animate__zoomIn">
                 <div><i class="fas fa-gamepad"></i></div>
                 <h3>Lorem, ipsum dolor.</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quod.</p>
             </div>
-            <div class="card">
+            <div class="card animate__animated animate__zoomIn">
                 <div><i class="fab fa-android"></i></div>
                 <h3>Lorem, ipsum dolor.</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quod.</p>
             </div>
-            <div class="card">
+            <div class="card animate__animated animate__zoomIn">
                 <div><i class="fas fa-users"></i></div>
                 <h3>Lorem, ipsum dolor.</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quod.</p>
             </div>
         </div>
+        
+        <!-- Centered -->
+        <div class="centered">
+            <h1>Check this out:</h1>
+                <iframe id="video" width="956" height="538" src="https://www.youtube.com/embed/wRO0W8uSwOA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </section>
 
-    <!-- Centered -->
-    <div class="centered">
-        <h1>Check this out:</h1>
-            <iframe width="956" height="538" src="https://www.youtube.com/embed/wRO0W8uSwOA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
     <!-- Section 2 -->
-    <section class="contact">
-        <h1>Subscribe to our Newsletter. Join our Email List..</h1>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-            <input type="email" name="email" id="email" placeholder="E-mail" required>
-            <input type="submit" value="Subscribe" id="submit">
-        </form>
+    <section class="contact" id="contact">
+        <div data-aos="zoom-in">
+            <h1>Subscribe to our Newsletter. Join our Email List..</h1>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <input type="submit" value="Subscribe" id="submit">
+            </form>     
+        </div>
     </section>
 
     <!-- Section 3 -->
-    <section class="shop">
+    <section class="shop" id="shop">
         <div class="container">
-            <div class="shop-info">
+            <div class="shop-info" data-aos="fade-right">
                 <h1>Musician Shop</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ipsa quo saepe consequatur obcaecati? Sapiente accusantium doloremque eligendi fugit dolorem?</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, vel.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, esse aut, tempora corrupti, reiciendis magnam corporis nobis molestias asperiores eaque exercitationem? Repellat, dolorum? Doloribus suscipit deleniti praesentium nobis enim hic.</p><br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea laudantium facilis natus modi ipsam totam ex hic adipisci perferendis architecto.</p>
             </div>
-            <div class="shop-img">
+            <div class="shop-img" data-aos="fade-left">
                 <img src="img/shop.png">
             </div>
             <div class="woman-img">
@@ -93,17 +97,23 @@
 
     <!-- Section 4 -->
     <section class="download">
-        <h1>Available for free on:</h1>
-        <div class="buttons">
-            <a href="#"><img src="img/google-play.png"></a>
-            <a href="#"><img src="img/app-store.png"></a>
+        <div data-aos="fade-up" class="wrapper">    
+            <h1>Available for free on:</h1>
+            <div class="buttons">
+                <a href="#"><img src="img/google-play.png"></a>
+                <a href="#"><img src="img/app-store.png"></a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        Copyright &copy; 2020 The Musician | Powered by <a href="#">jorgadev</a>
+        Copyright &copy; 2020 The Musician | Powered by<a href="#"> jorgadev</a>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
